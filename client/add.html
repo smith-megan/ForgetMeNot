@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forget Me Not</title>
+  <link rel=stylesheet href="./styles.css">
+  
+</head>
+<body>
+  <nav>
+    <a href="./index.html"><div class="nav-head">
+      <div class="logo"></div>
+      <p>Forget Me Not</p>
+    </div></a>
+    <div class="add"><a href="./add.html">add</a></div>
+    <div class="search"><a href="./search.html">search</a></div>
+  </nav>
+  <section class="div-form">
+    <h1>Add Event</h1>
+    <form class="form">
+      <div>
+        <label for="name">Person Name</label>
+        <input type="text" placeholder="Name">
+
+        <label for="month">Month</label>
+        <input type="number" placeholder="01">
+
+        <label for="day">Day</label>
+        <input type="number" placeholder="01">
+        
+        <label for="event">Event</label>
+        <select id="event">
+          <option value="birthday">Birthday</option>
+          <option value="anniversary">Anniversary</option>
+          <option value="graduation">Graduation</option>
+        
+        <label for="nodes">Notes/Ideas</label>
+        <input type="text" placeholder="ideas: Avatar stickers hobbies: programming Notes: allergic to peanuts!">
+      </div>
+      <div>
+        <h2>Remind me</h2>
+        <input value="dayof" type="checkbox">
+        <label for="dayof">Day of (call or text)</label>
+
+        <input value="threeday" type="checkbox">
+        <label for="threeday">3 days(note or card)</label>
+
+        <input value="weekof" type="checkbox">
+        <label for="weekof">7 days(gift)</label>
+      </div>
+      <button id="submitBtn">Add</button>
+    </form>
+  </section>
+  <script src="./add.js"></script>
+</body>
+</html>

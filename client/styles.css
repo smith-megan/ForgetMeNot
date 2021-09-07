@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400&display=swap');
+body{
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+nav{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.nav-head{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.logo {
+  background-image: url(./image/logo.png);
+  /* background-position: center; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* width: 200px; */
+  height: 100px;
+}
+#month{
+  font-size: 3.5rem;
+  width: 100%;
+}
+#calendar{
+  display: grid;
+  grid-template-columns: .14fr .14fr .14fr .14fr .14fr .14fr .14fr;
+}
