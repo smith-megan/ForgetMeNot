@@ -1,6 +1,3 @@
-// const add=import('add.js')
-let list=document.getElementsByClassName("list")
-
 let monthList={
   1: ["Jan","Friday", 31],
   2:["Feb", "Monday", 28],
@@ -29,7 +26,7 @@ function makeCalendar(date){
     calendar.append(dayLetter)
   }
   for(let i=1; i<date[2]+1; i++){
-    let dayCount=document.createElement('p')
+    let dayCount=document.createElement('div')
     dayCount.textContent=i
     dayCount.setAttribute("class",`day${i}`)
     calendar.append(dayCount)
@@ -37,3 +34,33 @@ function makeCalendar(date){
 }
 
 makeCalendar(monthList[9])
+
+let list=document.getElementById("list")
+
+function makeList(){
+  axios.get("http://localhost:4088/list")
+  .then((req,res)=>{
+    // console.log(req.body)
+    // console.log(res.body)
+    let eventsListed=req.data
+    console.log(eventsListed)
+
+    let eventListItem=document.createElement('div')
+    eventsListed.forEach(function(item,index,arr){
+      let pEvent=document.createElement('p')
+      pEvent.textContent=item.name+" "+item.month+" "+item.dayNum+" "+item.event
+      console.log(item)
+
+      eventListItem.append(pEvent)
+    })
+    
+    // dayCount.setAttribute("class",`day${i}`)
+   
+    list.append(eventListItem)
+    console.log("hi")
+    
+  })
+  .catch(err=>{console.log(err)})
+}
+document.getElementById("listCheck").addEventListener('click', ()=>{makeList()})
+// list.addEventListener("click", ()=>{makeList()})

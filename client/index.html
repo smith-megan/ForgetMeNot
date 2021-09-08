@@ -6,23 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forget Me Not</title>
   <link rel=stylesheet href="./styles.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
-  <nav>
-    <a href="./index.html"><div class="nav-head">
-      <div class="logo"></div>
-      <p>Forget Me Not</p>
-    </div></a>
-    <div class="add"><a href="./add.html">add</a></div>
-    <div class="search"><a href="./search.html">search</a></div>
-  </nav>
-  <h1 id=month></h1>
-  <section id="calendar">
-    
-  </section>
-  <section class="list">
-  </section>
+  <div class="homepage">
+    <div>
+    <nav>
+      <a href="./index.html"><div class="nav-head">
+        <div class="logo"></div>
+        <p>Forget Me Not</p>
+      </div></a>
+      <div class="add"><a href="./add.html">add</a></div>
+      <div class="search"><a href="./search.html">search</a></div>
+    </nav>
+    <h1 id=month></h1>
+    <section id="calendar">
+    </section>
+</div>
 
+  <section id="list">
+    <p>Upcoming Events</p>
+<button id="listCheck">check events</button>
+  </section>
+  </div>
 
   <script src="./index.js"></script>
 </body>

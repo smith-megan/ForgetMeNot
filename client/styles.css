@@ -2,6 +2,8 @@
 body{
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
+  margin:0;
+  color: #074B63;
 }
 a {
   text-decoration: none;
@@ -9,6 +11,10 @@ a {
 nav{
   display: grid;
   grid-template-columns: 33% 33% 33%;
+}
+.homepage{
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .nav-head{
   display: grid;
@@ -29,4 +35,7 @@ nav{
 #calendar{
   display: grid;
   grid-template-columns: .14fr .14fr .14fr .14fr .14fr .14fr .14fr;
+}
+#list{
+  background: linear-gradient(#97FFE6, #2DCC71);
 }
