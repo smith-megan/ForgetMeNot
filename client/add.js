@@ -1,5 +1,5 @@
 const submitBtn=document.querySelector('#submitBtn')
-let events=[]
+
 async function submitForm(e){
   e.preventDefault()
   let obj={}
@@ -12,11 +12,7 @@ async function submitForm(e){
   obj.day=elements[5].checked
   obj.threeday=elements[6].checked
   obj.week=elements[7].checked
-  events.push(obj)
-
-  axios.post('http://localhost:4088/event', events).then((req,res)=>{console.log(res)}).catch(err=>(console.log(err)))
+  axios.post('http://localhost:4088/event', obj).then((req,res)=>{console.log(res)}).catch(err=>(console.log(err)))
  }
 
 submitBtn.addEventListener("click", (e)=>{submitForm(e)})
-
-// module.exports=events

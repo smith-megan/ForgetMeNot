@@ -9,18 +9,23 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-  <nav>
-    <a href="./index.html"><div class="nav-head">
-      <div class="logo"></div>
-      <p>Forget Me Not</p>
-    </div></a>
-    <div class="add"><a href="./add.html">add</a></div>
-    <div class="search"><a href="./search.html">search</a></div>
-  </nav>
+  <div class="left-homepage-add">
+    <nav class="addNavClass">
+      <a href="./index.html"><div class="nav-head">
+        <div class="logo"></div>
+        <p class="logo-letters">Forget Me Not</p>
+      </div></a>
+      
+      <div class="addNav">
+        
+        <div class="add addCircle"><a href="./add.html">+</a></div>
+        <div class="add"><a href="./add.html">add</a></div>
+      </div>
+    </nav>
   <section class="div-form">
-    <h1>Add Event</h1>
+    <h1 class="addEvent">Add Event</h1>
     <form class="form">
-      <div>
+      <div class=form-event>
         <label for="name">Person Name</label>
         <input type="text" placeholder="Name">
 
@@ -36,23 +41,24 @@
           <option value="anniversary">Anniversary</option>
           <option value="graduation">Graduation</option>
         
-        <label for="nodes">Notes/Ideas</label>
-        <input type="text" placeholder="ideas: Avatar stickers hobbies: programming Notes: allergic to peanuts!">
+        <label for="notes">Notes/Ideas</label>
+        <input id="notes" type="text" placeholder="ideas: Loves Stickers">
       </div>
-      <div>
-        <h2>Remind me</h2>
+      <div class="remindDiv">
+        <h2 class="remind">Planning:</h2><p></p>
         <input value="dayof" type="checkbox">
-        <label for="dayof">Day of (call or text)</label>
+        <label for="dayof">Call / Text</label>
 
         <input value="threeday" type="checkbox">
-        <label for="threeday">3 days(note or card)</label>
+        <label for="threeday">Send a Note / Card</label>
 
         <input value="weekof" type="checkbox">
-        <label for="weekof">7 days(gift)</label>
+        <label for="weekof">Gift</label>
       </div>
-      <button id="submitBtn">Add</button>
+      <button class="submitBtnStyle" id="submitBtn">Add Event</button>
     </form>
   </section>
+  </div>
   <script src="./add.js"></script>
 </body>
 </html>
