@@ -1,10 +1,10 @@
-#Forget Me Not- a special event tracker and organizer.
+# Forget Me Not- a special event tracker and organizer.
 
 
-##Tech Stack: 
+## Tech Stack: 
 Javascript Frontend, Node.js Backend with Axios and Express libraries
 
-##Features:
+## Features:
 Main page has a calendar dynamically created based off the current date 
 ![Main Page](/main.png)
 
