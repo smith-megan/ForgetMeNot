@@ -22,7 +22,7 @@ function makeCalendar(date){
 
   let dayLetters=['S',"M","T","W","T","F","S"]
   
-  for(let i=0; i<dayLetters.length ;i++){
+  for(let i=0; i<=7 ;i++){
     let dayLetter=document.createElement('p')
     dayLetter.textContent=dayLetters[i]
     dayLetter.setAttribute("class", `dayLetter L${i}`)
@@ -80,3 +80,15 @@ function makeList(){
 }
 document.getElementById("listCheck").addEventListener('click', ()=>{makeList()})
 // list.addEventListener("click", ()=>{makeList()})
+function nextMonth(){
+    if ((calendarCount+correctDate)<12){
+  calendarCount++
+  } else{
+    correctDate=0
+    calendarCount=1
+  }
+  makeCalendar(monthList[correctDate+calendarCount])
+
+}
+let calendarCount=0
+document.getElementById("monthBtn").addEventListener('click',()=>{nextMonth()})
